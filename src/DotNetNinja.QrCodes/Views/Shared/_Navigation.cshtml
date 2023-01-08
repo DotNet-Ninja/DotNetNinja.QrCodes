@@ -1,0 +1,54 @@
+﻿@inject SiteSettings Settings
+@{
+    var isAuthenticated = User?.Identity?.IsAuthenticated ?? false;
+    var userName = (isAuthenticated) ? User?.Identity?.Name : "Anonymous";
+}
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        @if (!string.IsNullOrWhiteSpace(Settings.LogoUrl))
+                        {
+                            <img src="@Settings.LogoUrl" alt="@Settings.Name"/>
+                        }
+                        else
+                        {
+                            @Settings.Name
+                        }
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav-content">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-grow-1">
+                           
+                        </ul>
+                        <ul class="navbar-nav ms-auto flex-nowrap">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <avatar class="nav-avatar" size="28"/>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" is-authenticated="true">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="LogOut">
+                                            <i class="bi bi-box-arrow-right menu-icon"></i> Sign Out
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Diagnostics" is-development="true">
+                                            <i class="bi bi-graph-up-arrow menu-icon"></i> Diagnostics
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="dropdown-menu dropdown-menu-end" is-authenticated="false">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="LogIn">
+                                            <i class="bi bi-box-arrow-in-right menu-icon"></i> Sign In
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>

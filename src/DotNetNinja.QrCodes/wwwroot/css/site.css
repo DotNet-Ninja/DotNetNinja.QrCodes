@@ -1,16 +1,4 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+@import url('/lib/bootstrap-icons/font/bootstrap-icons.min.css');
 
 html {
   position: relative;
@@ -18,5 +6,68 @@ html {
 }
 
 body {
+  margin-top: 80px;
   margin-bottom: 60px;
+}
+
+main {
+  min-height: 480px;
+}
+
+footer {
+  margin-top: 24px;
+}
+
+.menu-icon {
+  padding-right: 4px;
+}
+
+.nav-link {
+  padding: 6px 16px !important;
+}
+
+.nav-avatar {
+  border-radius: 14px;
+  background-color: #ffffff;
+  height: 28px;
+  width: 28px;
+}
+
+.denied {
+  font-size: 8em;
+}
+
+.big {
+  font-size: 8em;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+.status-code {
+  text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+.skew {
+  transform: rotate(-7deg);
+}
+
+.error-link {
+  color: #990000;
+}
+
+.calc-result {
+  font-size: 3em;
+}
+
+.card-btn {
+  transition: transform .1s ease-in-out;
+}
+
+.card-btn:hover {
+  transform: translateX(-1px) translateY(-1px);
+  filter: brightness(105%);
+  cursor: pointer;
+  text-decoration: none;
 }

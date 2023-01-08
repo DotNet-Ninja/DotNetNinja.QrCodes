@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.6.1",
+      "destination": "wwwroot/lib/jquery",
+      "files": [
+        "jquery.js",
+        "jquery.min.js",
+        "jquery.min.map"
+      ]
+    },
+    {
+      "library": "jquery-validate@1.19.5",
+      "destination": "wwwroot/lib/jquery-validation",
+      "files": [
+        "jquery.validate.js",
+        "jquery.validate.min.js",
+        "additional-methods.js",
+        "additional-methods.min.js"
+      ]
+    },
+    {
+      "library": "jquery-validation-unobtrusive@4.0.0",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive",
+      "files": [
+        "jquery.validate.unobtrusive.js",
+        "jquery.validate.unobtrusive.min.js"
+      ]
+    },
+    {
+      "library": "twitter-bootstrap@5.2.3",
+      "destination": "wwwroot/lib/bootstrap/",
+      "files": [
+        "js/bootstrap.bundle.js",
+        "js/bootstrap.bundle.js.map",
+        "js/bootstrap.bundle.min.js",
+        "js/bootstrap.bundle.min.js.map",
+        "css/bootstrap.css",
+        "css/bootstrap.css.map",
+        "css/bootstrap.min.css",
+        "css/bootstrap.min.css.map"
+      ]
+    },
+    {
+      "library": "bootstrap-icons@1.10.2",
+      "destination": "wwwroot/lib/bootstrap-icons/",
+      "files": [
+        "bootstrap-icons.svg",
+        "font/fonts/bootstrap-icons.woff",
+        "font/fonts/bootstrap-icons.woff2",
+        "font/bootstrap-icons.css",
+        "font/bootstrap-icons.json",
+        "font/bootstrap-icons.min.css"
+      ]
+    },
+    {
+      "library": "bootswatch@5.2.3",
+      "destination": "wwwroot/lib/bootswatch/"
+    }
+  ]
+}
